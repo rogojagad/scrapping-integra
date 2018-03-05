@@ -60,6 +60,8 @@ def get_sim_skem_cookie(s):
         print 'Cookie SIM SKEM didapatkan'
 
 def get_ipk_rank(s):
+    get_sim_akademik_cookie(s)
+
     for page_num in range(1,41):
         scrap_ipk_rank(s, page_num)
 
@@ -89,6 +91,8 @@ def scrap_ipk_rank(s, page_num):
             print row_data
             
 def isi_skem(s):
+    get_sim_skem_cookie(s)
+
     form = 'http://akademik3.its.ac.id/skem/entry_realisasi.php'
 
     payload = {
@@ -111,7 +115,5 @@ s = requests.Session()
 login_integra(s)
 # get_sim_beasiswa_cookie(s)
 # daftar_beasiswa(s)
-# get_sim_akademik_cookie(s)
 # get_ipk_rank(s)
-get_sim_skem_cookie(s)
 isi_skem(s)

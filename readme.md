@@ -2,7 +2,7 @@
 
 ## Deskripsi
 Sebuah script untuk scrapping dan otomatisasi penggunaan fitur
-di Integra ITS (https://intgera.its.ac.id). 
+di Integra ITS (https://integra.its.ac.id). 
 
 P.S
 This script means NO HARM at all, just an experiment. Always use this carefully.
@@ -19,7 +19,7 @@ Ini adalah script dengan bahasa pemrograman Python 2.7, anda bisa menjalankannya
 python integra.py
 ```
 
-Namun pastikan anda sudah menginstall modul - modul berikut
+Namun, pastikan anda sudah menginstall modul - modul berikut
 * requests - Untuk melakukan HTTP Request
 * json - Untuk mengolah data dalam format json
 * BeautifulSoup 4 - Untuk melakukan parsing data dalam format HTML
