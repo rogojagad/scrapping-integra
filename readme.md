@@ -13,6 +13,15 @@ script ini secara berlebihan
 ## How To
 
 ### Run It
+Buatlah file `credential.json` yang berisikan NRP dan Password anda dengan format berikut
+
+```
+{
+    "userid" : "NRP ANDA",
+    "password" : "PASSWORD ANDA
+}
+```
+
 Ini adalah script dengan bahasa pemrograman Python 2.7, anda bisa menjalankannya hanya dengan
 
 ```
