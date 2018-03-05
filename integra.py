@@ -95,6 +95,8 @@ def isi_skem(s):
 
     form = 'http://akademik3.its.ac.id/skem/entry_realisasi.php'
 
+    nrp = credential()['userid']
+
     payload = {
         "semester" : "21142",
         "kodekegiatan" : "1;35000",
@@ -103,7 +105,7 @@ def isi_skem(s):
         "tglselesai" : "05-03-2018",
         "act" : "simpan",
         "submit" : "submit",
-        "nrp" : "5115100702"
+        "nrp" : nrp
     }
 
     res = s.post(form, data=payload)
