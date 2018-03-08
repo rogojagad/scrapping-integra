@@ -43,7 +43,7 @@ Untuk memilih fitur yang akan anda gunakan, cukup uncomment fungsi terkait
 dan comment fungsi yang tidak diperlukan.
 
 Misalkan anda ingin mendapatkan ranking IPK, maka cukup uncomment fungsi `get_ipk_rank()`
-dan comment fungsi yang lain.
+dan comment fungsi yang lain. (soon will update the feature to choose specific function).
 
 Fungsi `login_integra(s)` adalah fungsi untuk mensimulasikan proses login ke integra,
 jadi jangan pernah menonaktifkan fungsi ini.
