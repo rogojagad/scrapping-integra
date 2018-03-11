@@ -2,13 +2,13 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
-def credential():
-    return json.load(open('credential.json'))
+def json_parser(filename):
+    return json.load(open(filename))
 
 def login_integra(s):
     hal_login = 'https://integra.its.ac.id'
 
-    s.post(hal_login, data=credential())
+    s.post(hal_login, data=json_parser('credential.json'))
 
     res = s.get('http://integra.its.ac.id/dashboard.php')
 
@@ -41,18 +41,7 @@ def get_members_page(matkul, kelas):
 def go_stalk(s, nrp):
     classes = ['A','B','C','D','E','F',]
 
-    subjects = { 
-        'KI1305' : "Aljabar Linear", 
-        'KI1306' : "Organisasi Komputer", 
-        'KI1307' : "Struktur Data", 
-        'KI1331' : "Matfor",
-        'KI1403' : "Arsitektur Perangkat Lunak",
-        'KI1439' : "Basis Data Terdistribusi",
-        'KI1326' : "Interaksi Manusia Komputer",
-        'KI1327' : "Keamanan Informasi dan Jaringan",
-        'KI1329' : "Managemen Proyek Perangkat Lunak",
-        "KI1328" : "Rekayasa Kebutuhan"
-    }
+    subjects = json_parser('matkul.json')
 
     for matkul in subjects:
         for kelas in classes:
@@ -61,7 +50,6 @@ def go_stalk(s, nrp):
 
             if nrp in result.text:
                 print subjects[matkul] + " " + kelas
-    
 
 s = requests.Session()
 login_integra(s)
