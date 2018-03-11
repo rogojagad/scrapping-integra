@@ -1,1 +1,5 @@
+# ignore personal data for login
 credential.json
+
+#ignore python compiled files
+*.pyc
