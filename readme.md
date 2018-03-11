@@ -22,19 +22,21 @@ Buatlah file `credential.json` yang berisikan NRP dan Password anda dengan forma
 }
 ```
 
-Ini adalah script dengan bahasa pemrograman Python 2.7, anda bisa menjalankannya hanya dengan
-
-```
-python integra.py
-```
-
-Namun, pastikan anda sudah menginstall modul - modul berikut
+Pastikan anda sudah menginstall modul - modul berikut
 * requests - Untuk melakukan HTTP Request
 * json - Untuk mengolah data dalam format json
 * BeautifulSoup 4 - Untuk melakukan parsing data dalam format HTML
 
+Ini adalah script dengan bahasa pemrograman Python 2.7, anda bisa menjalankannya dengan
+melakukan perintah berikut di terminal
+
+```
+python <nama file>.py
+```
+
 ### Use Specific Function
-Pada script ini tersedia 2 fitur yang berfungsi dengan baik
+#### integra.py
+Pada script `integra.py` tersedia 2 fitur yang berfungsi dengan baik
 
 * Mendapatkan list ranking IPK
 * Mendaftarkan SKEM
@@ -45,8 +47,12 @@ dan comment fungsi yang tidak diperlukan.
 Misalkan anda ingin mendapatkan ranking IPK, maka cukup uncomment fungsi `get_ipk_rank()`
 dan comment fungsi yang lain (soon will update the feature to choose specific function).
 
+#### stalking.py
+Terdapat file script lain yaitu `stalking.py` yang berguna untuk melihat daftar mata kuliah yang diambil oleh
+seorang mahasiswa tertentu.
+
 Fungsi `login_integra(s)` adalah fungsi untuk mensimulasikan proses login ke integra,
-jadi jangan pernah menonaktifkan fungsi ini.
+jadi jangan pernah menonaktifkan fungsi ini pada `integra.py` maupun `stalking.py`
 
 ## How Does It Work?
 
