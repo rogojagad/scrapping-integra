@@ -75,6 +75,7 @@ def scrap_ipk_rank(s, page_num):
 
     payload ={
         'page':page_num
+        # ,'thnAngkatan':'2015'
     }
 
     res = s.post(ipk_rank_page, data=payload)
