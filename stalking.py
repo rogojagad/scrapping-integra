@@ -51,10 +51,12 @@ def go_stalk(s, nrp):
             if nrp in result.text:
                 print subjects[matkul] + " " + kelas
 
-s = requests.Session()
-login_integra(s)
-get_sim_akademik_cookie(s)
-
 nrp = raw_input("Masukkan NRP yang akan di stalk (gunakan format baru): ")
+
+s = requests.Session()
+
+login_integra(s)
+
+get_sim_akademik_cookie(s)
 
 go_stalk(s, nrp)
