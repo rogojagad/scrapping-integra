@@ -1,5 +1,6 @@
 import requests
 import json
+import re
 from bs4 import BeautifulSoup
 
 def credential():
@@ -65,6 +66,10 @@ def get_ipk_rank(s):
     for page_num in range(1,41):
         scrap_ipk_rank(s, page_num)
 
+def cleanup(data):
+    to_string = str(data)
+    return re.sub('\s+', ' ', to_string)
+
 def scrap_ipk_rank(s, page_num):
     ipk_rank_page = 'http://akademik3.its.ac.id/list_ipkrank.php'
 
@@ -87,7 +92,7 @@ def scrap_ipk_rank(s, page_num):
             columns_in_a_row = row.find_all('td')
             row_data = ""
             for column in columns_in_a_row:
-                row_data += column.get_text()
+                row_data += cleanup(column.get_text())
             print row_data
             
 def isi_skem(s):
