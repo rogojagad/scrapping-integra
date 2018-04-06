@@ -65,9 +65,10 @@ def isi_skem(s):
         print "SKEM berhasil diisi"
 
 
-s = requests.Session()
-login_integra(s)
-# get_sim_beasiswa_cookie(s)
-# daftar_beasiswa(s)
-get_ipk_rank(s)
-# isi_skem(s)
+if __name__ = "__main__":
+    s = requests.Session()
+    login_integra(s)
+    # get_sim_beasiswa_cookie(s)
+    # daftar_beasiswa(s)
+    get_ipk_rank(s)
+    # isi_skem(s)
