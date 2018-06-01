@@ -134,7 +134,7 @@ def list_matkul(driver):
 
             # got_to_dosen_kuesioner_page(driver)
 
-        if len(visited) == target_count: break
+        if len(visited) == target_count - 1: break
 
 if __name__ == "__main__":
     driver = webdriver.PhantomJS(executable_path='/usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs')
