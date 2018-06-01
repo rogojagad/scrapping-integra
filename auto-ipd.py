@@ -119,10 +119,10 @@ def fill_dosen_kuesioner(driver):
 
 def count_matkul_target(driver):
     matkul_dropdown = Select(driver.find_element_by_id('mk_kuesioner'))
-    print len(matkul_dropdown.options)
+    return len(matkul_dropdown.options)
 
 def list_matkul(driver):
-    count_matkul_target(driver)
+    target_count  = count_matkul_target(driver)
 
     while True:
         matkul_list = refresh_matkul_dropdown(driver)
@@ -134,7 +134,7 @@ def list_matkul(driver):
 
             # got_to_dosen_kuesioner_page(driver)
 
-        if len(visited) == 5: break
+        if len(visited) == target_count: break
 
 if __name__ == "__main__":
     driver = webdriver.PhantomJS(executable_path='/usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs')
