@@ -13,7 +13,7 @@ def login(driver):
     nrp = raw_input("Masukkan NRP anda : ")
     password = getpass.getpass("Masukkan password anda : ")
 
-    sys.exit()
+#    sys.exit()
 
     nrp_input = driver.find_element_by_id('userid')
     nrp_input.send_keys(nrp)
