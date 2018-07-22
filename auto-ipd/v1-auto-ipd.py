@@ -30,8 +30,11 @@ def go_to_siakad(driver):
         if option.get_attribute("value") == './dashboard.php?sim=AKADX__-__':
             option.click()
             break
+    try:
+    	hyperlink = driver.find_element_by_partial_link_text("Kuesioner")
+    catch Exception,e:
+        driver.save_screenshot('screenshot.png')
 
-    hyperlink = driver.find_element_by_partial_link_text("Kuesioner")
     hyperlink.click()
 
 def get_first_unfilled(matkul_options):

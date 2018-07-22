@@ -3,17 +3,14 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from random import randint
 import sys
-import getpass
 
 visited = []
 
 def login(driver):
+    nrp = sys.argv[1]
+    password = sys.argv[2]
+
     driver.get("https://integra.its.ac.id")
-
-    nrp = raw_input("Masukkan NRP anda : ")
-    password = getpass.getpass("Masukkan password anda : ")
-
-#    sys.exit()
 
     nrp_input = driver.find_element_by_id('userid')
     nrp_input.send_keys(nrp)
@@ -31,9 +28,6 @@ def go_to_siakad(driver):
         if option.get_attribute("value") == './dashboard.php?sim=AKADX__-__':
             option.click()
             break
-
-    hyperlink = driver.find_element_by_partial_link_text("Kuesioner")
-    hyperlink.click()
 
 def get_first_unfilled(matkul_options):
     for option in matkul_options:
@@ -143,6 +137,13 @@ if __name__ == "__main__":
     login(driver)
 
     go_to_siakad(driver)
+
+    try:
+    	hyperlink = driver.find_element_by_partial_link_text("Kuesioner")
+    except Exception,e:
+        driver.save_screenshot('screenshot.png')
+
+    hyperlink.click()
 
     list_matkul(driver)
 
