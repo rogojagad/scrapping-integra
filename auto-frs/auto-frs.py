@@ -1,4 +1,5 @@
 from utils import *
+import time
 
 userNrp = ""
 
@@ -40,6 +41,8 @@ def isiFrs(s):
         count += 1
 
         print "Percobaan ke " + str(count)
+
+	time.sleep(5)
 
 if __name__ == "__main__":
     s = requests.Session()
