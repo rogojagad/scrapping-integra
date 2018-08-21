@@ -14,7 +14,7 @@ Dengan menggunakan script ini, anda dapat melakukan pengisian FRS dengan **SANGA
 ### How to Use?
 1. Clone repo ini
 2. Lakukan langkah yang disebutkan pada bagian **Prerequisites**
-3. Rename file `credentials.json.example` menjadi `credentials.json`
+3. Rename file `credential.json.example` menjadi `credential.json`
 4. Isi NRP kalian pada bagian `userid` dan password kalian pada bagian `password`
 5. Buka file `auto-frs.py`
 6. Pada fungsi `matkulList`, isikan kode matkul yang kalian inginkan di bagian `listOfMatkul` (lihat bagian **Panduan Kode Matkul** untuk membuat kode matkul)
